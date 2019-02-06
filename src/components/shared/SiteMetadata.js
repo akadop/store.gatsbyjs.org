@@ -9,8 +9,8 @@ const bodyStyles = css`
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 16px;
-  margin: 0 auto;
   line-height: 1.375;
+  margin: 0 auto;
 `;
 
 export default () => (
@@ -72,13 +72,16 @@ export default () => (
 
         <meta
           property="og:image"
-          content={`${siteUrl}/android-chrome-512x512.png`}
+          content={`${siteUrl}/instagram-doraforscale.jpg`}
         />
-        <meta property="og:image:alt" content="Gatsby Store Logo" />
-        <meta property="og:image:width" content="512" />
-        <meta property="og:image:height" content="512" />
+        <meta
+          property="og:image:alt"
+          content="Gatsby Socks using Dora for scale."
+        />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="686" />
 
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@gatsbyjs" />
       </Helmet>
     )}

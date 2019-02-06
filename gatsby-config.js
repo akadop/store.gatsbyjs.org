@@ -1,16 +1,27 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+});
+
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://store.gatsbyjs.org',
-    title: 'Gatsby Store',
-    description: 'Get Gatsby Swag!'
+    title: 'Holy buckets! Get your Gatsby swag here!',
+    description:
+      'Do you like spaced-out socks? All purple everything? Hitting #maximumcomf with JAMstack Jammies? Oh boy have we got the swag store for you!'
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/components/Layout/`)
+      }
+    },
     'gatsby-transformer-sharp',
     {
-      resolve: 'gatsby-source-shopify2',
+      resolve: 'gatsby-source-shopify',
       options: {
         shopName: 'gatsby-swag',
-        accessToken: '9aa73c089d34741f36edbe4d7314373a'
+        accessToken: process.env.SHOPIFY_ACCESS_TOKEN
       }
     },
     'gatsby-plugin-react-helmet',
@@ -27,6 +38,13 @@ module.exports = {
         icon: 'static/android-chrome-512x512.png'
       }
     },
-    'gatsby-plugin-offline'
+    'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-93349937-6',
+        respectDNT: true
+      }
+    }
   ]
 };

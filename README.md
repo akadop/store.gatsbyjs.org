@@ -1,6 +1,20 @@
-# Gatsby Store
+<p align="center">
+  <a href="https://gatsbyjs.org">
+    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  Gatsby <a href="https://store.gatsbyjs.org">Swag Store</a>
+</h1>
 
 This is the Gatsby store, where we make swag, stickers, and other Gatsby goodies available to contributors and Gatsby enthusiasts. 💪💜
+
+<p align="center">
+  <img alt="Gatsby socks with Dora for scale." src="https://store.gatsbyjs.org/instagram-doraforscale.jpg" />
+  Photo credit: <a href="https://instagram.com/doraforscale">doraforscale</a>
+</p>
+
+See it live: [store.gatsbyjs.org](https://store.gatsbyjs.org)
 
 ## Technical Overview
 
@@ -16,7 +30,7 @@ The store is statically rendered using the Shopify source plugin, and the mainta
 
 ## Free Swag for Contributors
 
-If you're a contributor to Gatsby, that means you can get one free item from our store! Log in using your GitHub account and we'll give you a discount code good for a t-shirt or socks.
+If you're a contributor to Gatsby, that means you can get one free item from our store! Log in using your GitHub account and we'll give you a discount code good for a t-shirt or socks. With five or more contributions, You can claim your **level two** swag!
 
 See [the docs for claiming contributor swag](https://next.gatsbyjs.org/docs/contributor-swag/) for additional details.
 
