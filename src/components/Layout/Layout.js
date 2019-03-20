@@ -38,7 +38,6 @@ injectGlobal`
 `;
 
 const Viewport = styled(`div`)`
-  overflow-x: hidden;
   width: 100%;
 `;
 
@@ -341,19 +340,6 @@ export default class Layout extends React.Component {
       // and load the contributor data
       this.loadContributor(profile.nickname);
     }
-  };
-
-  componentWillUnmount() {
-    this.desktopMediaQuery.removeListener(this.updateViewPortState);
-  }
-
-  updateViewPortState = e => {
-    this.setState(state => ({
-      interface: {
-        ...state.interface,
-        isDesktopViewport: this.desktopMediaQuery.matches
-      }
-    }));
   };
 
   toggleContributorAreaStatus = () => {
