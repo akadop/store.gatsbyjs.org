@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 import Image from 'gatsby-image';
 
@@ -99,7 +99,7 @@ const CodeEligibility = styled(`div`)`
     justify-content: center;
   }
 
-  span:first-child {
+  span:first-of-type {
     background: #999;
     flex-basis: 35%;
     font-size: 0.9rem;

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Image from 'gatsby-image';
-import styled, { keyframes } from 'react-emotion';
+import styled from '@emotion/styled';
+import { keyframes } from '@emotion/core';
 import { MdClose, MdZoomIn, MdZoomOut } from 'react-icons/md';
 
 import CommunityCaption from './CommunityCaption';
@@ -298,7 +299,7 @@ class ProductImagesBrowser extends Component {
         </Actions>
 
         <ZoomArea
-          innerRef={container => {
+          ref={container => {
             this.zoomArea = container;
           }}
         >
@@ -307,7 +308,7 @@ class ProductImagesBrowser extends Component {
             href={fluid.src}
             superZoom={superZoom}
             width={imageBoxHeight}
-            innerRef={image => {
+            ref={image => {
               this.imageBox = image;
             }}
           >

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Image from 'gatsby-image';
-import styled, { keyframes } from 'react-emotion';
+import styled from '@emotion/styled';
+import { keyframes } from '@emotion/core';
 import { MdZoomIn } from 'react-icons/md';
 
 import { breakpoints, colors, radius, spacing } from '../../utils/styles';
@@ -88,7 +89,7 @@ class ProductImage extends Component {
 
     return (
       <ProductImageLink
-        innerRef={el => {
+        ref={el => {
           this.imageLink = el;
         }}
         href={fluid.src}

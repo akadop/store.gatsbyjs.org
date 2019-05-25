@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import CartListItem from './CartListItem';
 
 import { colors, spacing } from '../../utils/styles';
@@ -23,7 +23,7 @@ const Headers = styled(`div`)`
     padding-bottom: ${spacing.xs}px;
     text-align: center;
 
-    &:first-child {
+    &:first-of-type {
       flex-grow: 1;
       text-align: left;
     }
@@ -37,25 +37,25 @@ const CartList = ({
   setCartLoading,
   isCartLoading
 }) => (
-  <>
-    <Headers>
-      <span>Product</span>
-      <span>Qty.</span>
-      <span>Remove</span>
-    </Headers>
-    <CartListRoot>
-      {items.map(item => (
-        <CartListItem
-          key={item.id}
-          item={item}
-          handleRemove={handleRemove(item.id)}
-          updateQuantity={updateQuantity(item.id)}
-          setCartLoading={setCartLoading}
-          isCartLoading={isCartLoading}
-        />
-      ))}
-    </CartListRoot>
-  </>
-);
+    <>
+      <Headers>
+        <span>Product</span>
+        <span>Qty.</span>
+        <span>Remove</span>
+      </Headers>
+      <CartListRoot>
+        {items.map(item => (
+          <CartListItem
+            key={item.id}
+            item={item}
+            handleRemove={handleRemove(item.id)}
+            updateQuantity={updateQuantity(item.id)}
+            setCartLoading={setCartLoading}
+            isCartLoading={isCartLoading}
+          />
+        ))}
+      </CartListRoot>
+    </>
+  );
 
 export default CartList;

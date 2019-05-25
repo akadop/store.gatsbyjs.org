@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import { colors, radius, spacing } from '../../utils/styles';
 import gql from 'graphql-tag';
 
@@ -14,7 +14,7 @@ const Issue = styled('li')`
   margin: 0;
   padding: 0.5rem 0;
 
-  :last-child:not(:first-child) {
+  :last-child:not(:first-of-type) {
     border-bottom: 0;
   }
 `;
@@ -104,11 +104,8 @@ export default ({ issues }) => (
           <IssueTitle>{issue.title}</IssueTitle>{' '}
           <IssueId>#{issue.url.split('/').pop()}</IssueId>
         </IssueLink>
-        {issue.labels.map(({url, name}) => (
-          <Label
-            href={formatLabelUrl(url)}
-            key={`${issue.id}-${url}`}
-          >
+        {issue.labels.map(({ url, name }) => (
+          <Label href={formatLabelUrl(url)} key={`${issue.id}-${url}`}>
             {name}
           </Label>
         ))}
